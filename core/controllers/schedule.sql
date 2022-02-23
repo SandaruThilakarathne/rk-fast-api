@@ -1,0 +1,1 @@
+select * from public."body-type" as btype join public."week-body" as wbtype on btype.id = wbtype.body join public."week_day_relation" as wdrelation on wbtype.week_id = wdrelation.week_id join public."day" as pday on pday.id = wdrelation.day_id join public."schedule" as pschedule on wdrelation.id = pschedule.week_day_id where btype.id ==
